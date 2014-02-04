@@ -10,7 +10,7 @@ assign c = a + b;
 endmodule
 
 module t00 #(
-	parameter W = 72
+	parameter W = 5
 )(
 	output logic [W-1:0] c,
 	input        [W-1:0] a, b,
