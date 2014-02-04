@@ -1,4 +1,4 @@
 verilator.js
 ============
 
-JavaScript backend for verilator
+JavaScript backend for [Verilator](http://www.veripool.org/wiki/verilator)
