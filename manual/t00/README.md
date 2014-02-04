@@ -1,5 +1,9 @@
-index.html -- HTML page,
-sim.js -- main simulator loop,
-verilated.js -- library
-Vt00.js -- generated (manual for now) js model.
-t00.sv -- original SystemVerilog model.
+**index.html** -- Main html page. Open console to see simulation log.
+
+**sim.js** -- Main simulator loop.
+
+**verilated.js** -- Verilated function library.
+
+**Vt00.js** -- Generated (manual for now) JavaScript RTL model.
+
+**t00.sv** -- Original SystemVerilog RTL model.
