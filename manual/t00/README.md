@@ -7,3 +7,5 @@
 **Vt00.js** -- Generated (manual for now) JavaScript RTL model.
 
 **t00.sv** -- Original SystemVerilog RTL model.
+
+[RUNME](https://rawgithub.com/drom/verilator.js/master/manual/t00/index.html)
