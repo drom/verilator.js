@@ -7,19 +7,19 @@ var Vt00 = {
 	// The application code writes and reads these signals to
 	// propagate new values into/out from the Verilated model.
 	clk : verilated.VL_IN8 (0,0),
-	c : verilated.VL_OUT8 (4,0),
-	a : verilated.VL_IN8 (4,0),
-	b : verilated.VL_IN8 (4,0),
+	c : verilated.VL_OUT32 (17,0),
+	a : verilated.VL_IN32 (17,0),
+	b : verilated.VL_IN32 (17,0),
 
 	// LOCAL SIGNALS
 	// Internals; generally not touched by application code
-	v__DOT__aa : verilated.VL_SIG8(4,0),
-	v__DOT__bb : verilated.VL_SIG8(4,0),
+	v__DOT__aa : verilated.VL_SIG32(17,0),
+	v__DOT__bb : verilated.VL_SIG32(17,0),
 	//char	__VpadToAlign10[2];
 
 	// LOCAL VARIABLES
 	// Internals; generally not touched by application code
-	__Vclklast__TOP__clk : verilated.VL_SIG8(0,0),
+	__Vclklast__TOP__clk : verilated.VL_SIG32(0,0),
 	//char	__VpadToAlign17[3];
 
 	// INTERNAL VARIABLES
@@ -68,12 +68,12 @@ Vt00.constructor = function () {
 	// Reset internal values
 
 	// Reset structure values
-	this.c = verilated.VL_RAND_RESET_I(5);
-	this.a = verilated.VL_RAND_RESET_I(5);
-	this.b = verilated.VL_RAND_RESET_I(5);
+	this.c = verilated.VL_RAND_RESET_I(18);
+	this.a = verilated.VL_RAND_RESET_I(18);
+	this.b = verilated.VL_RAND_RESET_I(18);
 	this.clk = verilated.VL_RAND_RESET_I(1);
-	this.v__DOT__aa = verilated.VL_RAND_RESET_I(5);
-	this.v__DOT__bb = verilated.VL_RAND_RESET_I(5);
+	this.v__DOT__aa = verilated.VL_RAND_RESET_I(18);
+	this.v__DOT__bb = verilated.VL_RAND_RESET_I(18);
 	this.__Vclklast__TOP__clk = verilated.VL_RAND_RESET_I(1);
 };
 
@@ -96,7 +96,7 @@ Vt00._sequent__TOP__1 = function (vlSymsp) {
 	console.log("    Vt00._sequent__TOP__1");
 	// Body
 	// ALWAYS at t00.sv:26
-	vlTOPp.c = (0x1f & (vlTOPp.v__DOT__aa) 
+	vlTOPp.c = (0x3ffff & (vlTOPp.v__DOT__aa) 
 			 + (vlTOPp.v__DOT__bb))|0;
 	// ALWAYS at t00.sv:24
 	vlTOPp.v__DOT__aa = vlTOPp.a|0;
