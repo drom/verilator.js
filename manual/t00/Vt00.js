@@ -90,10 +90,11 @@ Vt00._eval_initial = function (vlSymsp) {};
 Vt00._eval_settle = function (vlSymsp) {};
 
 Vt00._sequent__TOP__1 = function (vlSymsp) {
+	"use asm"
 	//Vt00* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
 	var vlTOPp = this;
 	/*VL_DEBUG_IF(VL_PRINTF*/
-	console.log("    Vt00._sequent__TOP__1");
+	//console.log("    Vt00._sequent__TOP__1");
 	// Body
 	// ALWAYS at t00.sv:26
 	vlTOPp.c = (0x3ffff & (vlTOPp.v__DOT__aa) 
@@ -117,26 +118,27 @@ Vt00._eval = function (vlSymsp) {
 };
 
 Vt00.eval = function () {
-	var __VclockLoop = 0,
-	    vlSymsp = this.__VlSymsp; // Setup global symbol table
-	    __Vchange = 1,
-	    vlTOPp = vlSymsp.TOPp;
+	var //__VclockLoop = 0,
+	    vlSymsp; // = this.__VlSymsp, // Setup global symbol table
+//	    __Vchange,
+//	    vlTOPp = vlSymsp.TOPp;
 
 	// Initialize
-	if (/*VL_UNLIKELY*/(!vlSymsp.__Vm_didInit)) { this._eval_initial_loop(vlSymsp) };
+	// if (/*VL_UNLIKELY*/(!vlSymsp.__Vm_didInit)) { this._eval_initial_loop(vlSymsp) };
 	// Evaluate till stable
 	// console.log("----TOP Evaluate Vt00.eval");
-	__VclockLoop = 0;
-	__Vchange = 1;
-	while (/*VL_LIKELY*/(__Vchange)) {
-		console.log(" Clock loop");
-		vlSymsp.__Vm_activity = true;
+//	__VclockLoop = 0;
+//	__Vchange = 0;
+//	while (/*VL_LIKELY*/(__Vchange)) {
+	{
+		// console.log(" Clock loop");
+//		vlSymsp.__Vm_activity = true;
 		this._eval(vlSymsp);	
-		__Vchange = this._change_request(vlSymsp);
-		if (++__VclockLoop > 100) {
+//		__Vchange = this._change_request(vlSymsp);
+//		if (++__VclockLoop > 100) {
 			// vl_fatal
-			console.log("Verilated model didn't converge");
-			__Vchange = 0;
-		}
+			// console.log("Verilated model didn't converge");
+//			__Vchange = 0;
+//		}
 	}
 };

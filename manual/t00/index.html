@@ -2,29 +2,31 @@
 <head>
 	<title>RTL simulator</title>
 	<script type="text/javascript" src="verilated.js"></script>
-	<script type="text/javascript" src="Vt00.js"></script>
+	<script type="text/javascript" src="Vt00.asm.js"></script>
 </head>
 <body>
-	<svg id="svgcontent_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="176" viewBox="0 0 288 176" overflow="hidden">
+	<svg id="svgcontent_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="256" viewBox="0 0 288 256" overflow="hidden">
 	<style type="text/css">.v{font-size:12pt;text-anchor:middle;font-family:Helvetica}.l{fill:none;stroke:#000;stroke-width:1px;stroke-opacity:1}.lb{fill:#06F;font-size:12pt;text-anchor:end;font-family:Helvetica}</style>
 	<g transform="translate(.5,.5)">
 		<g transform="translate(64,32)"><text class="v" id="v_a">a</text><text transform="translate(-32)" class="lb">a:</text></g>
 		<g transform="translate(64,64)"><text class="v" id="v_v__DOT__aa">aa</text><text transform="translate(-32)" class="lb">aa:</text></g>
-		<g transform="translate(192,32)"><text class="v" id="v_b">b</text><text transform="translate(-32)" class="lb">b:</text></g>
+		<!--g transform="translate(192,32)"><text class="v" id="v_b">b</text><text transform="translate(-32)" class="lb">b:</text></g-->
 		<g transform="translate(192,64)"><text class="v" id="v_v__DOT__bb">bb</text><text transform="translate(-32)" class="lb">bb:</text></g>
 		<g transform="translate(128,128)"><text class="v" id="v_cc">cc</text><text transform="translate(-32)" class="lb">cc:</text></g>
 		<g transform="translate(128,160)"><text class="v" id="v_c">c</text><text transform="translate(-32)" class="lb">c:</text></g>
-		<g transform="translate(256,128)"><text class="v" id="v_clk">clk</text><text transform="translate(-8)" class="lb">clk:</text></g>
+		<g transform="translate(48,220)"><text class="v" id="v_clk">clk</text><text transform="translate(-8)" class="lb">clk:</text></g>
 
 		<g transform="translate(64,32)"> <path class="l" d="m 0,3 0,16"/></g>
-		<g transform="translate(192,32)"><path class="l" d="m 0,3 0,16"/></g>
+		<!--g transform="translate(192,32)"><path class="l" d="m 0,3 0,16"/></g-->
 		<g transform="translate(128,128)"><path class="l" d="m 0,3 0,16"/></g>
 
 		<g transform="translate(128,96)"> <path class="l" d="m 0,8 0,11 M 8,0 A 8,8 0 1 1 -8,0 8,8 0 1 1 8,0 z M -6,0 6,0 M 0,-6 0,6 M 8,0 64,0 64,-29 M -8,0 -64,0 -64,-29"/></g>
+		<g transform="translate(128,160)"> <path class="l" d="m 0,8 0,16 104,0 0,-160 -40,0 0,26"/></g>
 	</g>
 	</svg>
 	<br>
-	Press Space to step.
+	Press Space = step. Enter = RunAll
+	<div id="console">0</div>
 	<script type="text/javascript" src="sim.js"></script>
 </body>
 </html>
