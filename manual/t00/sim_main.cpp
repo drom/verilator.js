@@ -58,5 +58,5 @@ int main(int argc, char **argv, char **env) {
 	cout = double(50 / (double( clock() - startTime ) / (double)CLOCKS_PER_SEC));
 
 	// Read outputs
-	VL_PRINTF ("time:%f    a:%d aa:%d b:%d bb:%d c:%d\n", cout, top->a, top->v__DOT__aa, top->b, top->v__DOT__bb, top->c);
+	VL_PRINTF ("freq:%f MHz   a:%d aa:%d b:%d bb:%d c:%d\n", cout, top->a, top->v__DOT__aa, top->b, top->v__DOT__bb, top->c);
 }
