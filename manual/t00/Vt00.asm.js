@@ -70,7 +70,7 @@ function Vt00 (stdlib, foreign, heap) {
 
 	function eval_more () {
 		var i;
-		for (i = 0; i < 5000000; i++) {
+		for (i = 0; i < 50000000; i++) {
 			u8[24     ] = 0;
 			_eval ();
 			u8[24     ] = 1;

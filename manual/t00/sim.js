@@ -63,7 +63,7 @@
 			start = new Date().getTime();
 			top.eval_more();
 			end = new Date().getTime();
-			freq = Math.round(5000/(end - start));
+			freq = Math.round(50000/(end - start));
 			console.log(freq);
 			document.getElementById('console').innerHTML = freq + 'MHz';
 			render_all(top.GetState());
